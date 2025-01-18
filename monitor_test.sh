@@ -1,13 +1,12 @@
 #!/bin/bash
 
-
 PROCESS_NAME="test"
 URL="https://test.com/monitoring/test/api"
 PID_FILE="/tmp/test_process.pid"
 LOG_FILE="/var/log/monitoring.log"
 
 log() {
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - \$1" >> "$LOG_FILE"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$LOG_FILE"
 }
 
 if pgrep "$PROCESS_NAME" > /dev/null; then
