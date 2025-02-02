@@ -4,9 +4,7 @@ URL="https://test.com/monitoring/test/api"
 PID_FILE="/tmp/test_process.pid"
 LOG_FILE="/var/log/monitoring.log"
 
-log() {
-    echo "$(date) - $1" >> $LOG_FILE
-}
+log() { echo "$(date) - $1" >> $LOG_FILE; }
 
 if pgrep test > /dev/null; then
     CURRENT_PID=$(pgrep test)
